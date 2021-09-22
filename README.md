@@ -27,36 +27,18 @@ See the demo video for more details and results.
 
 The code uses Python 3.6.8 and it was tested on Tensorflow 1.14.0.
 
-Install pip and virtualenv
-```
-sudo apt-get install python3-pip python3-venv
-```
+
 
 Install ffmpeg
 ```
 sudo apt install ffmpeg
-```
+这里改成使用fmpeg-python  yhttps://github.com/kkroening/ffmpeg-python
+``` 
 
-Clone the git project:
-```
-git clone https://github.com/TimoBolkart/voca.git
-```
+Use conda
 
-Set up virtual environment:
 ```
-mkdir <your_home_dir>/.virtualenvs
-python3 -m venv <your_home_dir>/.virtualenvs/voca
-```
-
-Activate virtual environment:
-```
-cd voca
-source <your_home_dir>/voca/bin/activate
-```
-
-Make sure your pip version is up-to-date:
-```
-pip install -U pip
+conda create -n voca python=3.6.8
 ```
 
 The requirements (including tensorflow) can be installed using:
