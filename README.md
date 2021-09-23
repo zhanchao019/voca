@@ -48,6 +48,10 @@ pip install -r requirements.txt
 
 Install mesh processing libraries from [MPI-IS/mesh](https://github.com/MPI-IS/mesh) within the virtual environment.
 
+MAC系统编译报错可使用下列命令
+```
+CFLAGS="-mmacosx-version-min=10.7 -stdlib=libc++" make
+```
 ## Data
 
 #### Data to run the demo 

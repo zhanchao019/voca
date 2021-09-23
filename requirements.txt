@@ -4,11 +4,12 @@ chumpy
 opencv-python
 resampy
 python-speech-features
-tensorflow==1.15.2
+tensorflow==1.15.3
 scikit-learn
 image
 ipython
 matplotlib
 trimesh
 pyrender
+ffmpy
 
