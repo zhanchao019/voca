@@ -28,6 +28,7 @@ from scipy.io import wavfile
 from psbody.mesh import Mesh
 from utils.audio_handler import  AudioHandler
 from utils.rendering import render_mesh_helper
+from tqdm import tqdm
 
 def process_audio(ds_path, audio, sample_rate):
     config = {}
@@ -84,7 +85,7 @@ def render_sequence_meshes(audio_fname, sequence_vertices, template, out_path, u
 
     num_frames = sequence_vertices.shape[0]
     center = np.mean(sequence_vertices[0], axis=0)
-    for i_frame in range(num_frames):
+    for i_frame in tqdm(range(num_frames)):
         render_mesh = Mesh(sequence_vertices[i_frame], template.f)
         if vt is not None and ft is not None:
             render_mesh.vt, render_mesh.ft = vt, ft
