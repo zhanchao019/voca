@@ -12,4 +12,4 @@ matplotlib
 trimesh
 pyrender
 ffmpy
-
+tqdm

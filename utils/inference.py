@@ -96,6 +96,7 @@ def render_sequence_meshes(audio_fname, sequence_vertices, template, out_path, u
     video_fname = os.path.join(out_path, 'video.mp4')
     cmd = ('ffmpeg' + ' -i {0} -i {1} -vcodec h264 -ac 2 -channel_layout stereo -pix_fmt yuv420p {2}'.format(
         audio_fname, tmp_video_file.name, video_fname)).split()
+    print(cmd)
     call(cmd)
 
 

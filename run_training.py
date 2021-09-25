@@ -75,6 +75,8 @@ def main():
     with tf.Session() as session:
         model = Model(session=session, config=config, batcher=batcher)
         model.build_graph()
+        writer=tf.summary.FileWriter('logs/',session.graph)
+        print("log ok!!!!!")
         model.load()
         model.train()
 

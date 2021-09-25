@@ -17,7 +17,7 @@ For comments or questions, please email us at voca@tue.mpg.de
 
 from __future__ import division
 import os
-os.environ['PYOPENGL_PLATFORM'] = 'egl' # Uncommnet this line while running remotely
+#os.environ['PYOPENGL_PLATFORM'] = 'egl' # Uncommnet this line while running remotely
 import cv2
 import pyrender
 import trimesh
@@ -124,6 +124,7 @@ def render_mesh_helper(mesh, t_center, rot=np.zeros(3), tex_img=None, v_colors=N
     flags = pyrender.RenderFlags.SKIP_CULL_FACES
     try:
         r = pyrender.OffscreenRenderer(viewport_width=frustum['width'], viewport_height=frustum['height'])
+
         color, _ = r.render(scene, flags=flags)
     except:
         print('pyrender: Failed rendering frame')
